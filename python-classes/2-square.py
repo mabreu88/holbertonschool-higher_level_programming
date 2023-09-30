@@ -12,8 +12,7 @@ class Square:
         __init__ Initializes the size value of the square.
 
         Attributes:
-            size (:obj: 'int', optional): The square size
-
+            size (:obj:`int`, optional): The size of the square.
         Raises: 
         TypeError: size must be an integer, otherwise raise a TypeError
 
