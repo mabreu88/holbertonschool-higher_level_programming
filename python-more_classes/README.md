@@ -309,3 +309,5 @@ Public class attribute print_symbol:
     * Returns rect_1 if both have the same area value
 * Class method def square(cls, size=0): that returns a new Rectangle instance with width == height == size
 * You are not allowed to import any module
+
+Made by Martin Abreu.
