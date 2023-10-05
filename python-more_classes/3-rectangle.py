@@ -71,6 +71,6 @@ class Rectangle:
         return rect_str
 
     def __str__(self):
-        """ Return a printed Rectangle """
+        """ Return a string with printed Rectangle """
 
         return self.__print_rectangle()
