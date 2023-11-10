@@ -1,0 +1,2 @@
+-- List databases 
+SOW DATABASES;
