@@ -11,7 +11,7 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     c = db.cursor()
-    c.execute("SELECT * from states WHERE name LIKE BINARY %s ORDER BY states.id ASC",
+    c.execute("SELECT * from states WHERE name LIKE BINARY %(name)s ORDER BY states.id ASC",
               (argv[4],))
     for state in c.fetchall():
         print(state)
