@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     for state in session.query(State).filter(
-            State.name.contains('a')).order_by(State.id).all:
+            State.name.contains('a')).order_by(State.id).all():
         session.delete(state)
     session.commit()
     session.close()
