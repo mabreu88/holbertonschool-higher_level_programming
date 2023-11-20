@@ -13,15 +13,9 @@ if __name__ == "__main__":
     c = db.cursor()
     c.execute("SELECT cities.name FROM cities\
                 INNER JOIN states ON cities.state_id = states.id\
-                WHERE states.name = %s ORDER BY cities.id", (argv[4], ))
-    ls = []
-    for cities in c.fetchall():
-        if cities not in ls:
-            ls.append(cities)
-    print(ls[0][0], end="")
-    ls.remove(ls[0])
-    for x in ls:
-        print(", ", x[0], end="")
-    print("")
+                WHERE states.name = %s ORDER BY cities.id ASC", (argv[4], ))
+    lis = c.fetchall()
+    if lis is not None:
+        print(", ".join([row[1] for row in lis]))
     c.close()
     db.close()
